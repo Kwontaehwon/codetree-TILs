@@ -18,6 +18,10 @@ int main() {
             dp[i + j] = max(dp[i+j], dp[i] + 1);
         }
     }
-    cout << dp[n-1];
+    int ans = 0;
+    for(int i = 0 ; i < n ; i++){
+        ans = max(ans, dp[i]);
+    }
+    cout << ans;
     return 0;
 }
