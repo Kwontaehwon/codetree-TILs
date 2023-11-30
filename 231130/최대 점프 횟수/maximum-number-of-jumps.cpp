@@ -13,6 +13,7 @@ int main() {
     }
 
     for(int i = 0 ; i < n ; i++){
+        if(i != 0 && dp[i] == 0) continue;
         for(int j = 1 ; j <= arr[i]; j++){
             if(i + j >= n) break;
             dp[i + j] = max(dp[i+j], dp[i] + 1);
